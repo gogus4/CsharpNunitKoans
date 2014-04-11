@@ -141,8 +141,8 @@ namespace TheKoans
 			var paul = new AnimalOwner<Person,Cat> (new Person{ Name = "Paul" });
 			var expected = new[]{ typeof(Person), typeof(Cat) };
 
-			Assert.AreEqual (FILL_ME_IN, paul.GetType ().GetGenericArguments ().Length);
-			Assert.AreEqual (FILL_ME_IN, paul.GetType ().GetGenericArguments ());
+			Assert.AreEqual (2, paul.GetType ().GetGenericArguments ().Length);
+			Assert.AreEqual (new [] {typeof(Person),typeof(Cat) }, paul.GetType ().GetGenericArguments ());
 		}
 
 		[Test]

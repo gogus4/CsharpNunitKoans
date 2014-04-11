@@ -25,7 +25,7 @@ namespace TheKoans
 			try {
 				nullReference.GetHashCode ();
 			} catch (Exception exception) {
-				Assert.AreEqual (FILL_ME_IN, exception.Message, "If you're still unsure, take a look at the name of this method...");
+				Assert.AreEqual ("La référence d'objet n'est pas définie à une instance d'un objet.", exception.Message, "If you're still unsure, take a look at the name of this method...");
 			}
 		}
 
@@ -33,14 +33,14 @@ namespace TheKoans
 		public void CheckingThatAnObjectIsNull ()
 		{
 			object obj = null;
-			Assert.IsTrue (obj == FILL_ME_IN);
+			Assert.IsTrue (obj == null);
 		}
 
 		[Test]
 		public void ABetterWayToCheckThatAnObjectIsNull ()
 		{
 			object obj = null;
-			Assert.IsNull (FILL_ME_IN, "If only we had an object passed in as a parameter...");
+			Assert.IsNull (obj, "If only we had an object passed in as a parameter...");
 		}
 
 		[Test]

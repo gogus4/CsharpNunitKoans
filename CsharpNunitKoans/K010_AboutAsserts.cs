@@ -6,14 +6,14 @@ namespace TheKoans
 	[TestFixture]
 	public class K010_AboutAsserts : KoanHelper
 	{
-		private static readonly Int32 FILL_ME_IN = new Int32 ();
-		private static readonly bool FILL_ME__IN;
+		private static readonly Int32 FILL_ME_IN = 1;
+		private static readonly bool FILL_ME__IN = true;
 
 		[Test]
 		public void AssertTruth ()
 		{
-			Assert.IsTrue (FILL_ME__IN);   
-// Your long journey begins with a simple step.  We seek what's true, help us find it.
+			Assert.IsTrue(FILL_ME__IN);  
+			// Your long journey begins with a simple step.  We seek what's true, help us find it.
 		}
 
 		[Test]
@@ -25,7 +25,7 @@ namespace TheKoans
 		[Test]
 		public void AssertFalse ()
 		{
-			Assert.IsFalse (true, "Truth comes in many forms. Here what is true should be false.");
+			Assert.IsFalse (!FILL_ME__IN, "Truth comes in many forms. Here what is true should be false.");
 		}
 
 		[Test]
@@ -37,7 +37,7 @@ namespace TheKoans
 		[Test]
 		public void AssertEqualityTheBetterWay ()
 		{
-			var expectedValue = FILL_ME_IN;
+			var expectedValue = 2;
 			var actualValue = 1 + 1;
 
 			Assert.AreEqual (expectedValue, actualValue, "When your karma is broken it is more helpful to know what was expected and what it actually is.");
