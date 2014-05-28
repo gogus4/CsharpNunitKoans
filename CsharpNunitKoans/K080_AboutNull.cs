@@ -14,7 +14,9 @@ namespace TheKoans
 		public void NilIsNotAnObject ()
 		{
 			//not everything is an object
-			Assert.IsTrue (typeof(object).IsAssignableFrom (null), "To quote from South Park's World of Warcraft episode: 'Can you kill that which has no life?'"); 
+			
+			// A verifier
+			Assert.IsTrue(!typeof(object).IsAssignableFrom (null), "To quote from South Park's World of Warcraft episode: 'Can you kill that which has no life?'"); 
 		}
 
 		[Test]
@@ -47,7 +49,7 @@ namespace TheKoans
 		public void AWayNotToCheckThatAnObjectIsNull ()
 		{
 			object obj = null;
-			Assert.IsTrue (obj.Equals (null));
+			Assert.IsTrue (obj == null);
 		}
 		// RJG Begin Under Construction
 		// Passing Null Objects to C# Extension Methods... is allowed?!?!?
